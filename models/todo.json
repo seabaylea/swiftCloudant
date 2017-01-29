@@ -1,0 +1,19 @@
+{
+  "name": "todo",
+  "plural": "todos",
+  "classname": "Todo",
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "appName": "swiftCloudant",
+  "store": {
+    "type": "cloudant",
+    "host": "0fde06e8-e83b-44fd-991c-b6d08e333457-bluemix.cloudant.com",
+    "port": 443,
+    "secured": true,
+    "username": "0fde06e8-e83b-44fd-991c-b6d08e333457-bluemix",
+    "password": "d4730516d7b5640369a460d7f8fabf55d2a18020104308ad8b909caf0065dd83"
+  },
+  "logger": "helium",
+  "port": 8090
+}

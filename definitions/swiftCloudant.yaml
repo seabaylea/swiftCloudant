@@ -1,0 +1,150 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: swiftCloudant
+schemes:
+  - http
+basePath: /api
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  '/todos/{id}':
+    get:
+      tags:
+        - todo
+      summary: 'Find a model instance by {{id}}'
+      operationId: todo.findOne
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/todo'
+      deprecated: false
+    put:
+      tags:
+        - todo
+      summary: Put attributes for a model instance and persist it
+      operationId: todo.replace
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/todo'
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/todo'
+      deprecated: false
+    patch:
+      tags:
+        - todo
+      summary: Patch attributes for a model instance and persist it
+      operationId: todo.update
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            $ref: '#/definitions/todo'
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/todo'
+      deprecated: false
+    delete:
+      tags:
+        - todo
+      summary: 'Delete a model instance by {{id}}'
+      operationId: todo.delete
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+  /todos:
+    post:
+      tags:
+        - todo
+      summary: Create a new instance of the model and persist it
+      operationId: todo.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            $ref: '#/definitions/todo'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/todo'
+      deprecated: false
+    get:
+      tags:
+        - todo
+      summary: Find all instances of the model
+      operationId: todo.findAll
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/todo'
+      deprecated: false
+    delete:
+      tags:
+        - todo
+      summary: Delete all instances of the model
+      operationId: todo.deleteAll
+      responses:
+        '200':
+          description: Request was successful
+      deprecated: false
+definitions:
+  todo:
+    properties:
+      id:
+        type: string
+      title:
+        type: string
+      completed:
+        type: boolean
+    additionalProperties: false
+    required:
+      - title
