@@ -1,9 +1,15 @@
+declared-services: 
+    Cloudant: 
+        label: cloudantNoSQLDB 
+        plan: Lite 
 applications:
-- services:
-  - Cloudant
 - name: swiftCloudant
   memory: 128M
   instances: 1
   random-route: true
   buildpack: swift_buildpack
   command: swiftCloudant --bind 0.0.0.0:$PORT
+  env: OPENSPEC_API=<path to hosted swagger def>
+  services:
+  - Cloudant
+  timeout: 180
