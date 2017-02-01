@@ -1,4 +1,3 @@
----
 stages:
 - name: Build Stage
   inputs:
