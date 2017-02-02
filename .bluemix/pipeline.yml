@@ -27,6 +27,7 @@ stages:
       #!/bin/bash
       # cf create-service cloudantNoSQLDB Lite Cloudant
       env
+      ls -als
       curl -help
       # bluemix service create cloudantNoSQLDB Lite Cloudant
       cf push "${CF_APP}"
