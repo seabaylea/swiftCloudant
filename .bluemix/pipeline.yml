@@ -25,7 +25,8 @@ stages:
       application: ${CF_APP}
     script: |-
       #!/bin/bash
-      cf create-service cloudantNoSQLDB Lite Cloudant
+      # cf create-service cloudantNoSQLDB Lite Cloudant
+      bluemix service create cloudantNoSQLDB Lite Cloudant
       cf push "${CF_APP}"
       # View logs
       # cf logs "${CF_APP}" --recent
