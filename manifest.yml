@@ -9,7 +9,8 @@ applications:
   random-route: true
   buildpack: swift_buildpack
   command: swiftCloudant --bind 0.0.0.0:$PORT
-  env: "OPENSPEC_API"="/explorer/swagger.yml"
+  env: 
+    OPENSPEC_API: "/explorer/swagger.yml"
   services:
   - Cloudant
   timeout: 180
