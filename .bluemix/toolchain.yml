@@ -14,7 +14,6 @@ repo:
   parameters:
     repo_name: "{{name}}"
     repo_url: "{{repository}}"
-    type: clone
     has_issues: true
 
 # Pipelines
