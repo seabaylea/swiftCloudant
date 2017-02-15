@@ -52,4 +52,4 @@ deploy:
     dev-region: "{{region}}"
     dev-organization: "{{organization}}"
     dev-space: "dev"
-    app-name: "{{repo.parameters.repo_name}}"
+    app-name: "{{toolchain.name}}"
