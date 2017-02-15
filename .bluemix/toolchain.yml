@@ -8,6 +8,10 @@ required:
  - deploy
  - repo
 
+toolchain:
+  name: knownapp
+
+
 # Github repos
 repo:
   service_id: githubpublic
