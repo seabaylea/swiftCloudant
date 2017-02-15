@@ -19,7 +19,6 @@ repo:
     repo_url: "{{repository}}"
     type: link
     has_issues: true
-    type: link
 
 # Pipelines
 build:
