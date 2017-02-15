@@ -12,9 +12,9 @@ required:
 repo:
   service_id: githubpublic
   parameters:
-    repo_name: "{{name}}"
     repo_url: "{{repository}}"
     has_issues: true
+    type: link
 
 # Pipelines
 build:
