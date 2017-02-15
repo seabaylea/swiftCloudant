@@ -52,4 +52,4 @@ deploy:
     dev-region: "{{region}}"
     dev-organization: "{{organization}}"
     dev-space: "dev"
-    app-name: "{{toolchain.name}}"
+    app-name: "knownapp"
